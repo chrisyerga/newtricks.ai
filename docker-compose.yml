@@ -1,0 +1,10 @@
+services:
+  web:
+    image: ${WEB_IMAGE:-ghcr.io/chrisyerga/newtricks-ai:latest}
+    container_name: newtricks-web
+    restart: unless-stopped
+    networks:
+      - porch
+networks:
+  porch:
+    external: true
